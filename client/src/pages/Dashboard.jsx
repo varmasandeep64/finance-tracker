@@ -15,7 +15,7 @@ export default function Dashboard() {
   const [typeFilter, setTypeFilter] = useState('all');
   const [categoryFilter, setCategoryFilter] = useState('all');
 
-  const API_URL = 'http://localhost:5000/api/transactions';
+ const API_URL = import.meta.env.VITE_API_URL + '/api/transactions';
   const config = { headers: { Authorization: `Bearer ${token}` } };
 
   const categories = ['Salary', 'Freelance', 'Food', 'Rent', 'Utilities', 'Shopping', 'Travel', 'Health', 'Other'];
